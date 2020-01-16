@@ -1,11 +1,37 @@
 #header {
 text-align: center;
 font-family: fantasy;
-font-size: 40px 
+font-size: 40px;
+color: red
+}
+
+#Instructions {
+color: rgb(64, 38, 126);
+text-align: center;
+}
+
+#step-by-step {
+font-size: 20px;
+
+}
+
+#Instructions-Part-2 {
+color: rgb(64, 38, 126);
+text-align: center;
+}
+
+#weapon {
+color: rgb(64, 38, 126);
+text-align: center;
 }
 
 #body {
-text-align: center;
 font-family: fantasy;
-font-size: 40px 
+font-size: 20px;
+background-color: rgb(153, 147, 147);
+}
+
+#viciouscircle {
+color: red;
+text-align: center;
 }
