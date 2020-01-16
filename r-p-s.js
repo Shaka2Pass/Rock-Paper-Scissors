@@ -1,22 +1,47 @@
-import getRandomThrow from './get-random-throw.js'
+import getRandomThrow, { resultsOfThrow } from './get-random-throw.js';
 
-const rps = document.getElementById('rps')
 const attackButton = document.getElementById('attackButton')
-const rock = document.getElementById('rock')
-const yourAttack = document.getElementById('yourAttack')
-const wins = document.getElementById('wins')
-const losses = document.getElementBy('losses')
-const draws = document.getElementBy('draws')
+const winsDisplay = document.getElementById('wins')
+const lossesDisplay = document.getElementById('losses')
+const drawsDisplay = document.getElementById('draws')
+const resultsDisplay = document.getElementById('attackResults')
 
-let tries = 1
-const correctGuessRock = 1;
-;attackButton.addEventListener('click',() => 
+let wins = 0;
+let losses = 0;
+let draws = 0;
 
+attackButton.addEventListener('click', () => {
 
-    if (getRandomThrow(Number(rock.value), correctGuessRock) === -1)
-    (attackResults.textContent = 'PAPER BEATS ROCK SUCKA';
-}
-    
+    const usersChoice = document.querySelector('input:checked').value;
 
-console.log(getRandomThrow());
+    const computerChoice = getRandomThrow();
+
+    const gameResults = resultsOfThrow(usersChoice,computerChoice);
+
+    console.log(gameResults);
+
+    if (usersChoice === computerChoice) return 'draw';
+    if (usersChoice === 'rock' && computerChoice === 'scissors') return 'win';
+    if (usersChoice === 'scissors' && computerChoice === 'paper') return 'win';
+    if (usersChoice === 'paper' && computerChoice === 'rock') return 'win';
+
+    if (gameResults === 'win'){
+        wins++;
+
+        winsDisplay.textContent = wins;
+        resultsDisplay.textContent = 'YOU WIN!';
+    } 
+
+    else if (gameResults === 'loss'){
+        losses++;
+        lossesDisplay.textContent = losses;
+        resultsDisplay.textContent = 'YOU LOSE SUCKA!';
+
+    } else {
+        draws++;
+        drawsDisplay.textContent = draws; 
+        resultsDisplay.textContent = 'DRAW!';
+    }
+})
+
 
