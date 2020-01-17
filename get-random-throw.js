@@ -1,5 +1,6 @@
 //creating a function that generates a random number. The parameters are initially undefined.
-export default function getRandomThrow(){
+function getRandomThrow(){
+
 
 //use the function math.floor(math.random() * 3) - which generates a radom integer between 0-2 and set it equal to a variable called randomNumber.
     const randomNumber = Math.floor(Math.random() * 3);
@@ -18,7 +19,7 @@ function getRPSThrow(numberGuess){
    
 }
 //Create a new function called resultsOfThrow that passes to values player and computer.
-export function resultsOfThrow(player, computer){
+function resultsOfThrow(player, computer){
     if (player === computer) return 'draw';
     if (player === 'rock' && computer === 'scissors') return 'win';
     else if (player === 'scissors' && computer === 'paper') return 'win'; 
@@ -26,3 +27,7 @@ export function resultsOfThrow(player, computer){
     else return 'loss';
 }
 
+export {
+    getRandomThrow,
+    resultsOfThrow,
+};
