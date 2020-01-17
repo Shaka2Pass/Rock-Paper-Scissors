@@ -54,6 +54,9 @@ font-size: 20px;
 #attackButton {
   font-family: 'Montserrat', sans-serif;
   color: #1b2e40;
+  height: 30px;
+  width: 90px;
+  text-align: center;
 }
 
 

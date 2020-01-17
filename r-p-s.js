@@ -13,7 +13,7 @@ let draws = 0;
 
 attackButton.addEventListener('click', () => {
 
-    const usersChoice = document.querySelector('input:checked').value;
+    const usersChoice = document.querySelector('input:checked');
 
     const computerChoice = getRandomThrow();
 
