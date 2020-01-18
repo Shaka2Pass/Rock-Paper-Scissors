@@ -57,5 +57,30 @@ h1 {
     height: 30px;
     width: 90px;
     text-align: center;
+    
   }
+
+  #refresh {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 8px;
+    color: #1b2e40;
+    height: 15px;
+    width: 45px;
+    text-align: center;
+    opacity: 0;
+    
+  }
+
+  [type=radio].shaka { 
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+
+  [type=radio].shaka + img {
+    cursor: pointer;
+    padding: 30px;
+  }
+
   
