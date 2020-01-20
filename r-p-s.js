@@ -18,8 +18,7 @@ attackButton.addEventListener('click', () => {
     const computerChoice = getRandomThrow();
 
     const gameResults = resultsOfThrow(usersChoice, computerChoice);
-
-
+    
     if (gameResults === 'win') {
         win ++;
         winsDisplay.textContent = win;
