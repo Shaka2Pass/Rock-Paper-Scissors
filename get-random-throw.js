@@ -18,7 +18,7 @@ function getRandomThrow(){
         if (numberGuess === 2) return 'scissors';
        
     }
-    //Create a new function called resultsOfThrow that passes to values player and computer.
+    //Create a new function called resultsOfThrow that passes two values player and computer.
     function resultsOfThrow(player, computer){
         if (player === computer) return 'draw';
         if (player === 'rock' && computer === 'scissors') return 'win';
